@@ -151,6 +151,24 @@ main .add .intro{padding-top:clamp(24px,3.5vw,56px)}
 }
 main .add .buy .pr{row-gap:8px}
 main .add .intro .section__title{font-size:clamp(24px,6.6vw,34px)}
+/* 追加③：公式ストアの表示（上部バー・販売元・フッター） */
+.topbar{background:#1f2422;color:#fff;font-size:11.5px;line-height:1.5;text-align:center;padding:7px 12px;letter-spacing:.02em}
+main .add .intro__sub{line-height:1.7}
+.ft{background:#eeece4;color:#484848;padding:clamp(40px,8vw,80px) 6.4% calc(36px + 56px);display:grid;gap:28px;font-family:var(--sans);font-size:13px;line-height:1.8}
+.ft__brand{display:grid;gap:8px;justify-items:start}
+.ft__logo{width:84px;height:auto}
+.ft__tag{margin:0;font-family:var(--font-mincho);font-size:14px;letter-spacing:.06em}
+.ft__trust{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.ft__trust li{background:#fff;border-radius:4px;padding:10px 12px;display:grid;gap:2px}
+.ft__trust b{font-family:var(--font-mincho);font-size:15px;color:#0b5c64}
+.ft__trust span{font-size:11.5px;color:#6a716e}
+.ft__h{margin:0 0 4px;font-size:11px;letter-spacing:.18em;color:#6a716e}
+.ft__company p,.ft__sns p,.ft__pay p{margin:0}
+.ft__links ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 16px}
+.ft__links a,.ft__sns a{color:#484848;text-decoration:underline;text-underline-offset:4px}
+.ft__note{font-size:12px;color:#6a716e}
+.ft__copy{margin:8px 0 0;font-size:11px;color:#6a716e;border-top:1px solid #dcd9cf;padding-top:16px}
+@media (min-width:768px){ .ft{grid-template-columns:repeat(3,minmax(0,1fr));gap:40px 48px;max-width:1200px;margin:0 auto;padding-inline:6.4%} .ft__brand,.ft__trust,.ft__copy{grid-column:1/-1} .ft__trust{grid-template-columns:repeat(4,1fr)} }
 /* 差し込みブロックの調整（実ページの CSS と共存させる） */
 main .add .intro>*,main .add .vs>*{width:100%;max-width:560px;margin-inline:auto}
 main .add .inbox ul{grid-template-columns:repeat(5,minmax(0,1fr))}
@@ -160,6 +178,7 @@ main .add a{text-decoration-color:currentColor}
 </style>
 </head>
 <body style="margin:0">
+<div class="topbar">Yuan Japan 公式ストア｜正規代理店 モトヤ株式会社</div>
 <header class="mock-header"><img src="lp/logo.svg" alt="Yuan"></header>
 <main>
 <section class="hero">
@@ -197,7 +216,7 @@ main .add a{text-decoration-color:currentColor}
 <section class="intro" id="intro">
   <h4 class="subTitle-en"><span></span>Smart Writing Set</h4>
   <figure><img src="img/product.jpg" alt="箱に入ったノートとスマートペン"></figure>
-  <div class="head__box"><p class="subTitle">紙に書く感覚はそのままに、<br>書いた内容がアプリに残る</p><h3 class="section__title">スマートライティングセット</h3><p class="intro__sub">スマートペン＋専用ノート</p></div>
+  <div class="head__box"><p class="subTitle">紙に書く感覚はそのままに、<br>書いた内容がアプリに残る</p><h3 class="section__title">スマートライティングセット</h3><p class="intro__sub">スマートペン＋専用ノート｜販売元：モトヤ株式会社（Yuan 正規代理店・茨城県つくば市）</p></div>
   <ul class="trio">
     <li><b>設定なし</b><span>アプリ接続なしで<br>すぐ書ける</span></li>
     <li><b>8<i>時間</i></b><span>連続で<br>使える</span></li>
@@ -921,6 +940,48 @@ main .add a{text-decoration-color:currentColor}
         </div>
     </div>
 </section>
+
+<!-- ▼ 追加③ フッター（Shopify 標準のままだった部分をカスタマイズ） -->
+<footer class="ft">
+  <div class="ft__brand">
+    <img src="lp/logo.svg" alt="Yuan" class="ft__logo">
+    <p class="ft__tag">Yuan Japan 公式オンラインストア</p>
+  </div>
+  <ul class="ft__trust">
+    <li><b>国内発送</b><span>1〜3営業日でお届け</span></li>
+    <li><b>送料無料</b><span>全国一律</span></li>
+    <li><b>1年保証</b><span>メーカー保証つき</span></li>
+    <li><b>初期不良</b><span>到着後7日以内に交換</span></li>
+  </ul>
+  <div class="ft__company">
+    <p class="ft__h">運営会社</p>
+    <p><b>モトヤ株式会社</b>（Yuan 製品 輸入販売元・正規代理店）<br>
+    〒305-0031 茨城県つくば市吾妻1-10-1 つくばセンタービル4F<br>
+    TEL 029-869-7635（平日 10:00〜17:00）<br>
+    info@yuan-smartpen.jp</p>
+  </div>
+  <div class="ft__links">
+    <p class="ft__h">ご利用ガイド</p>
+    <ul>
+      <li><a href="https://yuan-smartpen.jp/pages/legal_info" target="_blank" rel="noopener">特定商取引法に基づく表記</a></li>
+      <li><a href="https://yuan-smartpen.jp/pages/privacy_policy" target="_blank" rel="noopener">プライバシーポリシー</a></li>
+      <li><a href="https://yuan-smartpen.jp/pages/%E9%85%8D%E9%80%81%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" target="_blank" rel="noopener">配送ポリシー</a></li>
+      <li><a href="https://yuan-smartpen.jp/pages/%E8%BF%94%E5%93%81-%E8%BF%94%E9%87%91%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC" target="_blank" rel="noopener">返品・返金ポリシー</a></li>
+      <li><a href="https://yuan-smartpen.jp/pages/guide" target="_blank" rel="noopener">お支払い・配送について</a></li>
+      <li><a href="https://yuan-smartpen.jp/pages/contact" target="_blank" rel="noopener">お問い合わせ</a></li>
+    </ul>
+  </div>
+  <div class="ft__sns">
+    <p class="ft__h">公式 Instagram</p>
+    <p><a href="https://www.instagram.com/" target="_blank" rel="noopener">@yuan_japan</a> <small class="chk">ID 要確認</small><br><span class="ft__note">使っている方の投稿を紹介しています</span></p>
+  </div>
+  <div class="ft__pay">
+    <p class="ft__h">お支払い方法</p>
+    <p>VISA／Mastercard／American Express／JCB／Apple Pay／Google Pay／PayPal／Shop Pay</p>
+  </div>
+  <p class="ft__copy">© 2026 Motoya Co., Ltd. All rights reserved.</p>
+</footer>
+<!-- ▲ 追加③ -->
 </main>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script>"use strict";$(".accordion__title").click(function(){$(this).next().slideToggle(),$(this).toggleClass("active")}),$(".video__btn").on("click",function(){const video=$(this).siblings(".video")[0];video.volume=.02,video.muted=!1,video.play(),video.controls=!0,$(this).hide()}),$(window).on("scroll",function(){const offset=$(this).scrollTop()*.2;$(".parallax").css("transform","translateY(-"+offset+"px)")});
