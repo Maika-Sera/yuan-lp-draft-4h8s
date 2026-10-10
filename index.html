@@ -165,7 +165,11 @@ main .add .intro__sub{line-height:1.7}
 .ft__h{margin:0 0 4px;font-size:11px;letter-spacing:.18em;color:#6a716e}
 .ft__company p,.ft__sns p,.ft__pay p{margin:0}
 .ft__links ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 16px}
-.ft__links a,.ft__sns a{color:#484848;text-decoration:underline;text-underline-offset:4px}
+.ft__links a{color:#484848;text-decoration:underline;text-underline-offset:4px}
+.ft__ig{display:inline-flex;align-items:center;gap:10px;color:#484848;text-decoration:none;margin:2px 0 4px}
+.ft__ig svg{flex:none;color:#0b5c64}
+.ft__ig span{font-size:13.5px;text-decoration:underline;text-underline-offset:4px}
+.ft__note{display:block}
 .ft__note{font-size:12px;color:#6a716e}
 .ft__copy{margin:8px 0 0;font-size:11px;color:#6a716e;border-top:1px solid #dcd9cf;padding-top:16px}
 @media (min-width:768px){ .ft{grid-template-columns:repeat(3,minmax(0,1fr));gap:40px 48px;max-width:1200px;margin:0 auto;padding-inline:6.4%} .ft__brand,.ft__trust,.ft__copy{grid-column:1/-1} .ft__trust{grid-template-columns:repeat(4,1fr)} }
@@ -972,8 +976,12 @@ main .add a{text-decoration-color:currentColor}
     </ul>
   </div>
   <div class="ft__sns">
-    <p class="ft__h">公式 Instagram</p>
-    <p><a href="https://www.instagram.com/" target="_blank" rel="noopener">@yuan_japan</a> <small class="chk">ID 要確認</small><br><span class="ft__note">使っている方の投稿を紹介しています</span></p>
+    <p class="ft__h">公式 SNS</p>
+    <a class="ft__ig" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      <span>@yuan_japan <small class="chk">ID 要確認</small></span>
+    </a>
+    <p class="ft__note">使っている方の投稿を紹介しています</p>
   </div>
   <div class="ft__pay">
     <p class="ft__h">お支払い方法</p>
